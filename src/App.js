@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Route, Routes, Switch } from "react-router-dom";
+import { Navigate, Route, Routes, Switch } from "react-router-dom";
 import NavBar from "./components/navbar";
 import Products from "./components/products";
 import Posts from "./components/posts";
@@ -21,6 +21,7 @@ class App extends Component {
           <Route path="/posts/:year/:month" element={<Posts />} />
           <Route path="/" element={<Home />} />
           <Route path="*" element={<NotFound />} />
+          <Route path="/messages" element={<Navigate to="/" />} />
         </Routes>
       </div>
     );
