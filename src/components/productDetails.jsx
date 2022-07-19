@@ -1,13 +1,17 @@
 import React from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 
 const ProductDetails = () => {
   const { id } = useParams();
+  let navigate = useNavigate();
+  const handleSave = () => {
+    navigate("/");
+  };
 
   return (
     <div>
       <h1>Product Details - {id}</h1>
-      <button onClick={this.handleSave}>Save</button>
+      <button onClick={handleSave}>Save</button>
     </div>
   );
 };
