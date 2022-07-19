@@ -15,6 +15,7 @@ class App extends Component {
       <div>
         <NavBar />
         <Routes className="content">
+          {/* It's the best to avoid optional parameter */}
           <Route path="/products/:id" element={<ProductDetails />}></Route>
           <Route path="/products" element={<Products />} />
           <Route path="/posts/:year/:month" element={<Posts />} />

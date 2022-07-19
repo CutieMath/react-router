@@ -1,8 +1,13 @@
 import React from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useLocation } from "react-router-dom";
+import queryString from "query-string";
 
 const Posts = () => {
   const { year, month } = useParams();
+  const location = useLocation();
+  const { sortBy } = queryString.parse(location.search);
+  console.log(sortBy);
+
   return (
     <div>
       <h1>Posts</h1>
