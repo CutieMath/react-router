@@ -3,9 +3,10 @@ import { useParams, useNavigate } from "react-router-dom";
 
 const ProductDetails = () => {
   const { id } = useParams();
+  // progmatic navigation with replace
   let navigate = useNavigate();
   const handleSave = () => {
-    navigate("/");
+    navigate("/", { replace: true });
   };
 
   return (
