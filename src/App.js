@@ -6,6 +6,7 @@ import Posts from "./components/posts";
 import Home from "./components/home";
 import ProductDetails from "./components/productDetails";
 import NotFound from "./components/notFound";
+import Admin from "./components/admin/dashboard";
 import "./App.css";
 
 class App extends Component {
@@ -18,6 +19,7 @@ class App extends Component {
           <Route path="/products/:id" element={<ProductDetails />}></Route>
           <Route path="/products" element={<Products />} />
           <Route path="/posts/:year/:month" element={<Posts />} />
+          <Route path="/admin/*" element={<Admin />} />
           <Route path="/" element={<Home />} />
           <Route path="*" element={<NotFound />} />
           <Route path="/messages" element={<Navigate to="/" />} />
